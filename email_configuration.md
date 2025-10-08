@@ -7,7 +7,7 @@ The application supports sending emails via an SMTP service. The same configurat
 | Parameter          | Type    | Description                                                                           |
 | ------------------ | ------- | ------------------------------------------------------------------------------------- |
 | **send_email**     | boolean | Enable or disable email sending. Set to `true` to allow email sending.                |
-| **smtp_service**   | string  | Name of the SMTP service provider (e.g., Gmail, Outlook, SendGrid).                   |
+| **smtp_service**   | string  | Name of the SMTP service provider (e.g., gmail, custom).                   |
 | **smtp_server**    | string  | Hostname or IP address of the SMTP server (e.g., `smtp.gmail.com`).                   |
 | **smtp_port**      | int     | Port number for the SMTP server. Common ports: 25 (non-secure), 465 (SSL), 587 (TLS). |
 | **smtp_secure**    | boolean | Enable secure connection (SSL/TLS) for SMTP communication.                            |
@@ -22,21 +22,21 @@ The application supports sending emails via an SMTP service. The same configurat
 
 ```env
 # Enable email sending
-SEND_EMAIL=true
+send_email=true
 
 # SMTP provider and server details
-SMTP_SERVICE=Gmail
-SMTP_SERVER=smtp.gmail.com
-SMTP_PORT=587
-SMTP_SECURE=true
+smtp_service=gmail
+smtp_server=smtp.gmail.com
+smtp_port=587
+smtp_secure=true
 
 # SMTP authentication
-SMTP_USERNAME=your_email@gmail.com
-SMTP_PASSWORD=your_app_password
+smtp_username=your_email@gmail.com
+smtp_password=your_app_password
 
 # Sender details
-SMTP_FROMEMAIL=your_email@gmail.com
-SMTP_FROMNAME=Your Name
+smtp_fromemail=your_email@gmail.com
+smtp_fromname=Your Name
 ```
 
 > **Note:** These entries should be added to both the **Server `.env`** and **Ingestor `.env`** files.
