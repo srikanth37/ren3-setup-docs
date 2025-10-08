@@ -18,13 +18,14 @@ The **DeepResearch** feature in ReN3 delivers comprehensive research capabilitie
 
 ### Configuration Parameters
 
-| Parameter               | Type    | Required    | Description                                                                                                       |
-| ----------------------- | ------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| `allow_deep_research`   | boolean | Yes         | Enable the DeepResearch functionality.                                                                            |
-| `use_offline_resources` | boolean | Optional    | Set to `true` to allow operation in air-gapped or offline environments.                                           |
-| `google_search_api_key` | string  | Conditional | Required for enabling web search functionality.                                                                   |
-| `google_search_cx`      | string  | Conditional | Required for enabling web search functionality.                                                                   |
-| `restricted_tools`      | array   | Optional    | List of tools to restrict. Leave empty (`[]`) to allow all research tools including web search and site browsing. |
+| Parameter                           | Type    | Required    | Description                                                                                                       |
+| ------------------------------------ | ------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
+| `allow_deep_research`                | boolean | Yes         | Enable the DeepResearch functionality.                                                                            |
+| `use_offline_resources`              | boolean | Optional    | Set to `true` to allow operation in air-gapped or offline environments.                                           |
+| `google_search_api_key`              | string  | Conditional | Required for enabling web search functionality.                                                                   |
+| `google_search_cx`                   | string  | Conditional | Required for enabling web search functionality.                                                                   |
+| `restricted_tools`                   | array   | Optional    | List of tools to restrict. Leave empty (`[]`) to allow all research tools including web search and site browsing. |
+| `default_pref_deepresearch_model`    | string  | Optional    | Name of the model configuration to use by default for DeepResearch. |
 
 ### Example Configuration
 
@@ -34,7 +35,8 @@ The **DeepResearch** feature in ReN3 delivers comprehensive research capabilitie
     "use_offline_resources": false,
     "google_search_api_key": "YOUR_GOOGLE_API_KEY",
     "google_search_cx": "YOUR_GOOGLE_CX_ID",
-    "restricted_tools": []
+    "restricted_tools": [],
+    "default_pref_deepresearch_model": "YOUR_MODEL_CONFIGURATION_NAME"
 }
 ```
 
