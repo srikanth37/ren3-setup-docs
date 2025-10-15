@@ -109,4 +109,4 @@ To update the logos in a VM environment, replace the corresponding files in the 
 - `/opt/rn3bp/web/build/favicon.ico`
 - `/opt/rn3bp/web/build/logo192.png`
 
-After replacing the files, restart the web service if required to apply the changes.
+After replacing the files, restart the web service.
